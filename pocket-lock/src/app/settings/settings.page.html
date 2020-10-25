@@ -1,0 +1,48 @@
+<!--This is the HTML for the Setting PAGe PAGE -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form"> <!--This code block is used to update user password-->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>New Account Password</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.oldPassword"placeholder="Old Password" type="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.password" placeholder="New Password" type="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.confirmPassword" placeholder="Confirm New Password" type="Password"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="changeAccountPassword()" color="secondary" expand="full" ><ion-icon class="check" name="checkmark-outline"></ion-icon>Confirm</ion-button>
+ </div>
+
+ <div class="form"><!--This code block is used to update user PIN-->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>New Lock Pin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.lock.oldPIN" placeholder="Old Pin" type="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.lock.newPIN" placeholder="New Pin" type="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]= "user.lock.confirmLockPIN" placeholder="Confirm New Pin" type="Password"></ion-input>
+  </ion-item>
+ 
+  <ion-button (click) ="changeLockCombination()" color="secondary" expand="full" ><ion-icon class="check" name="checkmark-outline" ></ion-icon>Confirm</ion-button>
+</div>
+</ion-content>

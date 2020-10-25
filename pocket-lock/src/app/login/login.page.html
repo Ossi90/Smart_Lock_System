@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-toolbar><!--Side bar-->
+    <ion-buttons slot="start">
+    <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+  <ion-title >
+  </ion-title>
+</ion-toolbar>
+<!--Logo-->
+  <img src="../../assets/logos/Alogo1.png" alt="lock" style=" display: block;
+  top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;">
+
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <ion-item> <!-- Email and Password Input fields-->
+   <ion-input [(ngModel)]="user.email" placeholder="Email Address"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="user.password" placeholder="Password" type="Password"></ion-input>
+</ion-item> <!--button that calls the logIn() function-->
+  <ion-button (click)= "logIn()" color="primary" expand="full" >Login <ion-icon class="loginIcon" name="checkmark-outline">
+</ion-icon>
+</ion-button>
+
+</ion-content>

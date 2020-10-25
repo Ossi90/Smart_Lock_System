@@ -1,0 +1,23 @@
+.pin{
+    
+   font-size: 60px;
+     border: 3px solid  rgb(231, 238, 252); ;
+     border-radius: 100px;
+     color:  #1869fb;
+     padding-inline-start: 50px;
+     float:left; 
+     margin:0px auto;
+     text-align: center;  
+     
+}
+
+.pinItem{
+    
+    top: 30%;
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+.scroll-content {
+  padding-bottom: 0 !important;
+}

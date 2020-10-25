@@ -1,0 +1,7 @@
+{
+  "name": "pocket-lock",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

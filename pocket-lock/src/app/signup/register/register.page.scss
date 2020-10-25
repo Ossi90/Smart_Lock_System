@@ -1,0 +1,28 @@
+.form{
+    border: 0.3px solid;
+    border-color: black;
+    padding: 0px;
+  }
+/*  .alert-tappable.alert-radio {
+    height: auto;
+    contain: content;
+}
+*/
+.alert-radio-label.sc-ion-alert-md,
+.alert-radio-label.sc-ion-alert-ios {
+    white-space: normal;
+}
+
+.QAbutton{
+  background-color: white;
+  text-align: center;
+  border-style: none;
+  border-radius: 50%;
+  font-size: 24px;
+  position: absolute;
+  right: 5%;
+}
+
+.title{
+  margin: 0;
+  display: inline-block;}

@@ -1,0 +1,48 @@
+<!--This is the HTML for the HOME PAGE -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+    <ion-title> </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">  <!--Logo -->
+  <img 
+    id="lockImg"
+    src="../../assets/logos/Alogo1.png"
+    style="
+      display: block;
+      position: absolute;
+      top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      right: 50%;
+      left: 25%;
+      width: 50%;
+    "
+  />
+  <br />
+  
+<!--This button activates the bionic reader by calling the finger() function-->
+  <ion-button
+    size="large"
+    (click)="openWithFingerPrint()"
+    style="
+     display: block;
+      box-shadow: 0px 14px 25px cornflowerblue;
+      font-size: 34px;
+      border-radius: 50px;
+      position: absolute;
+      top: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      right: 50%;
+      left: 25%;
+      width: 50%;
+    "
+    ><ion-icon name="finger-print-outline" style="font-size: 64px;"></ion-icon
+  ></ion-button>
+</ion-content>

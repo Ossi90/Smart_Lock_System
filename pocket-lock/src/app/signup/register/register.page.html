@@ -1,0 +1,80 @@
+<!--This is the HTML for the second  step of registration (Register PAGE) -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+  <ion-title>
+  </ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <ion-header>
+    <ion-toolbar>
+      </ion-toolbar>
+         <ion-title class="title">
+           Create New Account
+       </ion-title>
+       <button class="QAbutton" (click)= "howToRegesterAccount()"><ion-icon name="help-circle-outline"></ion-icon></button>
+      </ion-header>
+     <ion-item> <!--user creates user account-->
+    <ion-input [(ngModel)]="user.userName" placeholder="User Name"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-input [(ngModel)]="user.email" placeholder="Email Address"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="user.password" placeholder="Password" type="Password"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="user.confirmPassword" placeholder="Confirm Password" type="Password"></ion-input>
+</ion-item>
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+  <ion-title class="title">
+    Create New Lock PIN
+  </ion-title>
+  <button class="QAbutton" (click)= "howToCreatePIN()"><ion-icon name="help-circle-outline"></ion-icon></button>
+</ion-header>
+<ion-item> <!--user creates PIN combination-->
+  <ion-input [(ngModel)]="user.lock.lockCombination" placeholder="New Lock PIN" type="Password"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="user.lock. confirmLockCombination" placeholder="Confirm New PIN" type="Password"></ion-input>
+</ion-item>
+
+
+
+
+  <ion-header>
+    <ion-toolbar>
+    </ion-toolbar>
+    <ion-title class="title">
+      Security Question
+    </ion-title>
+    <button class="QAbutton" (click)= "howToCreateSecurityQ()"><ion-icon name="help-circle-outline"></ion-icon></button>
+  </ion-header>
+
+  <ion-item> <!--user picks a security question-->
+    <ion-input [(ngModel)]="user.securityQuestion.answer" placeholder="Select One Question" type="text"></ion-input>
+    <ion-select #newSelect placeholder="Questions" [selectedText]="question" [(ngModel)]="question"  (ionChange)="Getselected()">
+      <ion-select-option value="food">Favorite Food</ion-select-option>
+      <ion-select-option value="animal">Favorite Animal</ion-select-option>
+      <ion-select-option value="restaurant">Favorite Restaurant </ion-select-option>
+      <ion-select-option value="country">Favorite Country</ion-select-option>
+      <ion-select-option value="movie">Favorite Movie</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
+
+<ion-footer>  
+<ion-button class (click)= "signUp()" color="secondary" expand="full" >Register New Account</ion-button>
+</ion-footer>
+
+

@@ -1,0 +1,71 @@
+<!--This is the HTML for the PIN PAGE -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+
+  
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item class="pinItem">
+    <!--Place holders for each digit in the PIN code-->
+    <ion-input 
+      class="pin" 
+      [(ngModel)]="user.pin1" 
+      placeholder="0" type="Password"
+       maxlength="1" 
+       (keyup)="nextDigit(pin2)">
+      </ion-input>
+
+    <ion-input 
+      class="pin" 
+      [(ngModel)]="user.pin2" 
+      placeholder="0" type="Password" 
+      #pin2 maxlength="1" 
+      (keyup)="nextDigit(pin3)">
+    </ion-input>
+
+    <ion-input 
+      class="pin" 
+      [(ngModel)]="user.pin3" 
+      placeholder="0" type="Password"  
+      #pin3 maxlength="1" 
+      (keyup)="nextDigit(pin4)">
+    </ion-input>
+
+    <ion-input 
+      class="pin" 
+      [(ngModel)]="user.pin4" 
+      placeholder="0" 
+      type="Password"  
+      #pin4 maxlength="1"
+      (keydown)="nextDigit(pin4)">
+      </ion-input>
+  </ion-item>
+
+  <!--This button activate a function that sends MQTT message if the PIN is correct-->
+  <ion-button size="large" (click)= "openLock()" style="  
+  box-shadow: 0px 14px 25px cornflowerblue;
+  font-size: 34px;
+  border-radius: 50px; 
+  position: absolute;
+  top: 70%;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  right: 50%;
+  left: 25%;" 
+ ><ion-icon name="lock-open-outline"style="font-size: 64px;"></ion-icon></ion-button>
+<script src="jquery.min.js"></script>
+ 
+</ion-content>

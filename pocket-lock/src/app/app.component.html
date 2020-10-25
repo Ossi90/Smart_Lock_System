@@ -1,0 +1,91 @@
+ <!--This is the HTML Code for the side bars on each page-->
+<ion-app>
+<ion-menu side="start" menuId="finger" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/home/pin"> <ion-icon name="keypad-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use Pin</ion-item>
+        <ion-item href="/settings"><ion-icon name="settings-outline"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings</ion-item>
+        <ion-item (click)="logout()"href="/login"><ion-icon name="log-out-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu side="start" menuId="pin" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/home"><ion-icon name="finger-print-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use Fingerprint</ion-item>
+        <ion-item href="/settings"><ion-icon name="settings-outline"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings</ion-item>
+        <ion-item (click)="logout()"href="/login"><ion-icon name="log-out-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-menu side="start" menuId="settings" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/home/pin"> <ion-icon name="keypad-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use Pin</ion-item>
+        <ion-item href="/home"><ion-icon name="finger-print-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use Fingerprint</ion-item>
+        <ion-item (click)="logout()"href="/login"><ion-icon name="log-out-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu side="start" menuId="login" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/signup"><ion-icon name="person-add-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Register</ion-item>
+        <ion-item href="/forgot-password"><ion-icon name="help-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forgot Password</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-menu side="start" menuId="register" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/login"><ion-icon name="log-in-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login</ion-item>
+        <ion-item href="/forgot-password"><ion-icon name="help-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forgot Password</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu side="start" menuId="fPswrd" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>A-Lock</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/login"><ion-icon name="log-in-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login</ion-item>
+        <ion-item href="/signup"><ion-icon name="person-add-outline"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Register</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
